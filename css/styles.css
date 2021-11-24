@@ -85,7 +85,7 @@ ul {
   padding-top: 32px;
 }
 
-.contacts-item > .link {
+.contacts-item  {
   display: flex;
   text-align: center;
   padding-bottom: 32px;
