@@ -88,8 +88,6 @@ ul {
 .contacts-item  {
   display: flex;
   text-align: center;
-  padding-bottom: 32px;
-  padding-top: 32px;
 }
 
 .contacts-item:not(:last-child) {
@@ -150,6 +148,18 @@ ul {
 
 .nav-item .link.current {
   color: var(--accent-color);
+}
+
+.link.envelope {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.link.smartphone {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .nav-item .link.current::after {
@@ -409,15 +419,16 @@ ul {
 
 .examples-list {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  margin: -15px;
 }
 
 .examples-item {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  flex-basis: calc((100% - 6 * var(--card-set-gap)) / 6);
+  margin: 15px;
 
   color: var(--accent-color);
 }
