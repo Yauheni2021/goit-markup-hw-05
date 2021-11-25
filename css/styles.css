@@ -152,6 +152,14 @@ ul {
   color: var(--accent-color);
 }
 
+.nav-item .link.current::after {
+  content: "";
+  display: flex;
+  width: 48px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--accent-color);
+}
 
 .contacts-item .link {
   color: var(--primary-text-color);
@@ -237,7 +245,7 @@ ul {
   background-color: var(--bg-team-color);
   border-radius: 4px;
   margin-bottom: 30px;
-  /* padding: 25px 100px; */
+
 }
 
 
@@ -306,6 +314,16 @@ ul {
   max-width: 100%;
   height: auto;
 }
+
+.thumb-image {
+  position: relative;
+  text-align: center;
+  
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
 
 /*  команда  */
 
