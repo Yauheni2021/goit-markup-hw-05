@@ -13,6 +13,7 @@
   --social-link-color:#AFB1B8;
   --footer-link-color: rgba(255, 255, 255, 0.6);
   --btn-shadow-color: rgba(0, 0, 0, 0.15);
+  --bg-cards-overlay: rgba(33, 150, 243, 0.9);
   --card-set-gap: 30px;
   --transition-duration: 250ms;
   --transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -643,9 +644,44 @@ ul {
 
 /* карточки */
 
+.cards-suplist {
+  flex-basis: calc(100% / 3 - var(--card-set-gap));
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap);
+}
+
 .cards-suplink {
   display: block;
   text-decoration: none;
+}
+
+.cards-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.text-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56em;
+  position: absolute;
+  letter-spacing: 0.03em;
+  color: var(--primary-bg-color);
+  background-color: var(--bg-cards-overlay);
+  transform: translateY(101%);
+  transition: transform var(--transition-duration) 
+  var(--transition-timing-function);
+}
+
+.cards-suplink:hover .text-overlay,
+.cards-suplink:focus .text-overlay {
+  transform: translateY(0);
 }
 
 .cards-subtitle {
@@ -658,11 +694,7 @@ ul {
   color: var(--title-text-color);
 }
 
-.cards-suplist {
-  flex-basis: calc(100% / 3 - var(--card-set-gap));
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
-}
+
 
 .cards-suplink:hover, 
 .cards-suplink:focus {
