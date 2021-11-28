@@ -130,7 +130,8 @@ ul {
 
 /*шапка*/
 .link {
-  position: relative;
+  display: flex;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14em;
@@ -147,7 +148,7 @@ ul {
   opacity: 0;
   width: 100%;
   height: 4px;
-  bottom: -1px;
+  bottom: -2px;
   border-radius: 2px;
   background-color: var(--accent-color);
   transition: opacity var(--transition-duration)
@@ -180,6 +181,7 @@ ul {
 }
 
 .current {
+  position: relative;
   color: var(--accent-color);
 }
 
@@ -583,8 +585,8 @@ ul {
 .socials-link.footer {
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--primary-bg-color);
-  transition: fill var(--transition-duration) var(--transition-timing-function),
-    background-color var(--transition-duration) var(--transition-timing-function);
+  /* transition: fill var(--transition-duration) var(--transition-timing-function),
+    background-color var(--transition-duration) var(--transition-timing-function); */
 }
 
 .socials-link.footer:hover,
@@ -653,6 +655,8 @@ ul {
 .cards-suplink {
   display: block;
   text-decoration: none;
+  transition: box-shadow var(--transition-duration)
+  var(--transition-timing-function);
 }
 
 .cards-overlay {
